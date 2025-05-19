@@ -1,11 +1,12 @@
 import { ThemeToggle } from "../components/ThemeToggle";
-import { StarBackground } from "../components/StarBackground.jsx";
+import { NatureBackground } from "../components/NatureBackground.jsx";
 import { NavBar } from "../components/NavBar.jsx";
 import { HeroSection } from "../components/HeroSection.jsx";
 import { AboutSection } from "../components/Aboutsection.jsx";
 import { SkillsSection } from "../components/SkillsSection.jsx";
 import { ProjectsSection } from "../components/ProjectsSection.jsx";
 import { ContactSection } from '../components/ContactSection';
+import { Footer } from "../components/Footer.jsx";
 
 export const Home = () => {
   return (
@@ -14,7 +15,7 @@ export const Home = () => {
       <ThemeToggle />
 
       {/* Background Effects */}
-      <StarBackground />
+      <NatureBackground />
 
       {/* Navbar */}
       <NavBar />
@@ -29,6 +30,7 @@ export const Home = () => {
       </main>
 
       {/* Footer */}
+      <Footer />
     </div>
   );
 };

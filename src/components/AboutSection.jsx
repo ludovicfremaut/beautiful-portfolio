@@ -1,5 +1,6 @@
 import { Briefcase, Code, User } from "lucide-react";
 
+// Composant qui présente la section "À propos"
 export const AboutSection = () => {
   return (
     <section id="about" className="py-4 px-4 relative">
@@ -8,7 +9,10 @@ export const AboutSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           A propos de<span className="text-primary"> Moi</span>
         </h2>
+
+        {/* Grille avec deux colonnes (texte + icônes/compétences) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Colonne de gauche : présentation personnelle */}
           <div className="space-y-6">
             <h3>Développeur web curieux et créatif</h3>
 
@@ -27,8 +31,9 @@ export const AboutSection = () => {
               utiles.
             </p>
 
+            {/* Boutons : contact + téléchargement de CV */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
+              <a href="#contact" className="nature-button">
                 {" "}
                 Me Contacter
               </a>
@@ -42,14 +47,16 @@ export const AboutSection = () => {
             </div>
           </div>
 
+          {/* Colonne de droite : présentation des compétences */}
           <div className="grid grid-cols-1 gap-6">
+            {/* Développement web */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Developpment</h4>
+                  <h4 className="font-semibold text-lg"> Web Development</h4>
                   <p className="text-muted-foreground">
                     Création de sites responsives avec React, TypeScript,
                     Tailwind, et intégration d’APIs backend (Node.js, Express,
@@ -58,6 +65,8 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div>
+
+            {/* UI/UX */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -73,6 +82,8 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div>
+
+             {/* Gestion de projet */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -82,8 +93,8 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg">Project Management</h4>
                   <p className="text-muted-foreground">
                     Participation à des projets en équipe comme un réseau social
-                    en microservices. Utilisation de Git, GitHub, Docker
-                    et mise en place des bases de l’intégration continue.
+                    en microservices. Utilisation de Git, GitHub, Docker et mise
+                    en place des bases de l’intégration continue.
                   </p>
                 </div>
               </div>

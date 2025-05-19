@@ -2,21 +2,24 @@ import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
 
+// Définition des liens de navigation
 const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
+  { name: "Accueil", href: "#hero" },
+  { name: "A propos", href: "#about" },
   { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
+  { name: "Projets", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
+// Composant principal de la barre de navigation
 export const NavBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // Pour ajouter un effet en cas de scroll
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Pour gérer l'ouverture du menu mobile
 
+  // Gère le scroll : si l'utilisateur descend, on change le style de la navbar
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,11 +39,16 @@ export const NavBar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> Ludovic Fremaut </span>{" "}
+            {/* Effet de halo lumineux sur le nom */}
+            <span className="text-halo text-foreground">
+              {" "}
+              Ludovic Fremaut{" "}
+            </span>{" "}
             Portfolio
           </span>
         </a>
-        {/* desktop nav */}
+
+        {/* Navigation desktop (masquée sur petit écran) */}
         <div className="hidden md:flex space-x-8">
           {navItems.map((item, key) => (
             <a
@@ -53,7 +61,7 @@ export const NavBar = () => {
           ))}
         </div>
 
-        {/* mobile nav */}
+        {/* Bouton menu mobile (affiché seulement sur petit écran) */}
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
           className="md:hidden p-2 text-foreground z-50"
@@ -61,6 +69,7 @@ export const NavBar = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
         </button>
 
+        {/* Menu mobile (plein écran en overlay) */}
         <div
           className={cn(
             "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",

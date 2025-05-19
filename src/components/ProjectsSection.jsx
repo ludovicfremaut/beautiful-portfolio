@@ -1,5 +1,6 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
+// Liste des projets avec titres, descriptions, tags, images et liens
 const projects = [
   {
     id: 1,
@@ -15,17 +16,17 @@ const projects = [
     id: 2,
     title: "Portfolio V1",
     description:
-      "Première version de mon portfolio personnel, développée avec React, TypeScript et Vite. Ce projet m’a permis de me lancer dans la création d’une interface moderne, responsive et animée. Je l’intègre ici comme point de départ de mon parcours, pour illustrer ma progression technique et créative.",
+      "Première version de mon portfolio personnel, développée avec React, TypeScript et Vite. Ce projet m’a permis de me lancer dans la création d’une interface moderne, responsive et animée.",
     image: "/projects/FirstPortfolio.png",
     tags: ["React", "Vite", "TailwindCSS"],
     demoURL: "#",
     githubURL: "https://github.com/ludovicfremaut/PortFolio-ludovic_fremaut",
   },
   {
-    id: 1,
+    id: 3,
     title: "AI-Covoit",
     description:
-      "Projet de conception d’un système intelligent de covoiturage. Réalisé en autonomie lors d’un parcours ECF, il formalise l’architecture d’une API REST optimisée pour mettre en relation conducteurs et passagers selon leurs contraintes. Une base solide pour un futur backend intelligent.",
+      "Conception d’un système intelligent de covoiturage. Réalisé en autonomie lors d’un parcours ECF, ce projet modélise une API REST optimisée pour mettre en relation conducteurs et passagers.",
     image: "/projects/AI-covoit.png",
     tags: ["TypeScript", "Docker", "MongoDB"],
     demoURL: "#",
@@ -33,78 +34,90 @@ const projects = [
       "https://github.com/ludovicfremaut/AI-covoit/tree/J2-API-user-auth",
   },
 ];
+
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-primary"> Projects </span>
+          Projets <span className="text-primary"> réalisés</span>
         </h2>
 
-        <p className="text-center text-muted-foreground mb-12 maw-w-2xl mx-auto">
-          Voici une sélection de projets réalisés au fil de ma formation et de
-          mes expérimentations personnelles. Chaque projet reflète une étape de
-          ma progression : de mes premières conceptions à des architectures plus
-          complexes avec microservices, API sécurisées ou interface animée. J’y
-          applique mes connaissances en backend, frontend et gestion de projet —
-          toujours avec curiosité et envie d’aller plus loin.
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Voici quelques projets réalisés au fil de ma formation et de mes
+          expérimentations. Ils reflètent mon évolution technique, mes choix
+          d’architecture et ma curiosité constante.
         </p>
+
+        {/* Grille des projets */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              key={project.id}
+              className="group bg-card rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02] flex flex-col overflow-hidden"
             >
+              {/* Image */}
               <div className="h-48 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6">
+
+              {/* Contenu */}
+              <div className="p-6 flex flex-col flex-1">
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-xs font-medium bg-secondary/40 text-secondary-foreground rounded-full border border-border"
+                    >
                       {tag}
                     </span>
                   ))}
-                  <h3 className="text-xl font-semibold mb-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <div className="flex space-x-3">
-                      <a
-                        href={project.demoURL}
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                      >
-                        <ExternalLink size={20} />
-                      </a>
-                      <a
-                        href={project.githubURL}
-                        target="_blank"
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                      >
-                        <Github size={20} />
-                      </a>
-                    </div>
-                  </div>
+                </div>
+
+                {/* Titre + description */}
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {project.description}
+                </p>
+
+                {/* Liens */}
+                <div className="mt-auto flex justify-start items-center gap-4 pt-4">
+                  <a
+                    href={project.demoURL}
+                    className="link-button"
+                    title="Voir la démo"
+                  >
+                    <ExternalLink size={18} />
+                    <span>Démo</span>
+                  </a>
+                  <a
+                    href={project.githubURL}
+                    target="_blank"
+                    className="link-button"
+                    title="Voir le code"
+                  >
+                    <Github size={18} />
+                    <span>Code</span>
+                  </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Bouton vers GitHub global */}
         <div className="text-center mt-12">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            className="nature-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
             href="https://github.com/ludovicfremaut"
           >
-            Check my Github <ArrowRight size={16} />
+            Voir tous mes projets <ArrowRight size={16} />
           </a>
         </div>
       </div>
