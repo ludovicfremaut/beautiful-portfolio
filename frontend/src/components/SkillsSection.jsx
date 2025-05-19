@@ -3,7 +3,6 @@ import { cn } from "../lib/utils.js";
 import {
   Code,
   Server,
-  Wrench,
   FileCode,
   Database,
   Terminal,
@@ -58,7 +57,7 @@ const bgByCategory = {
 };
 
 const skills = [
-    // Outils
+  // Outils
   { name: "Git", level: 70, category: "tools" },
   { name: "GitHub", level: 75, category: "tools" },
   { name: "Figma", level: 60, category: "tools" },
@@ -85,12 +84,12 @@ export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
-  (skill) =>
-    activeCategory === "Tout" || 
-    (activeCategory === "Frontend" && skill.category === "frontend") ||
-    (activeCategory === "Backend" && skill.category === "backend") ||
-    (activeCategory === "Outils" && skill.category === "tools")
-);
+    (skill) =>
+      activeCategory === "Tout" ||
+      (activeCategory === "Frontend" && skill.category === "frontend") ||
+      (activeCategory === "Backend" && skill.category === "backend") ||
+      (activeCategory === "Outils" && skill.category === "tools")
+  );
 
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
@@ -130,10 +129,10 @@ export const SkillsSection = () => {
               title={skillDetails[skill.name]} // Tooltip d’explication
             >
               {/* Icône + Nom */}
-<div className="flex items-center gap-2 mb-4 text-left text-green-700 dark:text-lime-300 hover:text-primary transition-colors">
-  {iconMap[skill.name] || <Code size={20} />}
-  <h3 className="font-semibold text-lg">{skill.name}</h3>
-</div>
+              <div className="flex items-center gap-2 mb-4 text-left text-green-700 dark:text-lime-300 hover:text-primary transition-colors">
+                {iconMap[skill.name] || <Code size={20} />}
+                <h3 className="font-semibold text-lg">{skill.name}</h3>
+              </div>
 
               {/* Barre de progression */}
               <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
