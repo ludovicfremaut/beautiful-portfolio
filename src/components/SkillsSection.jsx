@@ -3,23 +3,23 @@ import { cn } from "../lib/utils.js";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 20, category: "frontend" },
-  { name: "React", level: 95, category: "frontend" },
-  { name: "Tailwind CSS", level: 95, category: "frontend" },
-  { name: "TypeScipt", level: 95, category: "frontend" },
+  { name: "HTML/CSS", level: 85, category: "frontend" },
+  { name: "JavaScript", level: 65, category: "frontend" },
+  { name: "React", level: 75, category: "frontend" },
+  { name: "Tailwind CSS", level: 60, category: "frontend" },
+  { name: "TypeScipt", level: 65, category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 90, category: "backend" },
-  { name: "Express.js", level: 90, category: "backend" },
-  { name: "MongoDB", level: 90, category: "backend" },
-  { name: "PostgreSQL", level: 90, category: "backend" },
+  { name: "Node.js", level: 80, category: "backend" },
+  { name: "Express.js", level: 80, category: "backend" },
+  { name: "MongoDB", level: 70, category: "backend" },
+  { name: "PostgreSQL", level: 75, category: "backend" },
 
   // Tools
-  { name: "Git", level: 90, category: "tools" },
-  { name: "GitHub", level: 90, category: "tools" },
-  { name: "Figma", level: 90, category: "tools" },
-  { name: "Postman", level: 90, category: "tools" },
+  { name: "Git", level: 70, category: "tools" },
+  { name: "GitHub", level: 75, category: "tools" },
+  { name: "Figma", level: 60, category: "tools" },
+  { name: "Postman", level: 85, category: "tools" },
   { name: "VSCode", level: 90, category: "tools" },
 ];
 

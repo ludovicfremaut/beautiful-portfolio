@@ -6,35 +6,38 @@ export const AboutSection = () => {
       {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary"> Me</span>
+          A propos de<span className="text-primary"> Moi</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3>Passionate Web Developper & tech creator</h3>
+            <h3>Développeur web curieux et créatif</h3>
 
             <p className="text-muted-foreground">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque, laudantium quasi eligendi totam et consequatur libero
-              id nam nulla harum?
+              J’aime créer des sites et applications web modernes, avec une
+              attention particulière à l’accessibilité, au design et à la
+              performance. Je me concentre surtout sur le front-end, tout en
+              développant aussi mes compétences en back-end grâce à des projets
+              complets comme Best Social Network.
             </p>
 
             <p className="text-muted-foreground">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto nobis dolorum maxime illo fuga exercitationem cumque
-              rem. Saepe, explicabo optio!
+              Toujours en train d’apprendre, je progresse à chaque projet. Que
+              ce soit avec React, TypeScript, Tailwind ou encore Node.js et
+              Docker, je cherche à construire des solutions simples, claires et
+              utiles.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 {" "}
-                Get In Touch
+                Me Contacter
               </a>
               <a
                 target="blank"
                 href="/public/Fremaut-Ludovic.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
-                Download CV
+                Télécharger mon CV
               </a>
             </div>
           </div>
@@ -45,44 +48,45 @@ export const AboutSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg"> Web Developpment</h4>
-                    <p className="text-muted-foreground">
-                      Creating responsive websites and web applications with
-                      modern Frameworks
-                    </p>
-                  </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg"> Web Developpment</h4>
+                  <p className="text-muted-foreground">
+                    Création de sites responsives avec React, TypeScript,
+                    Tailwind, et intégration d’APIs backend (Node.js, Express,
+                    PostgreSQL).
+                  </p>
+                </div>
               </div>
             </div>
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <User className="h-6 w-6 text-primary" />
-              </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg">UI/UX Design</h4>
-                    <p className="text-muted-foreground">
-                      Design intuitive user interfaces and seamless user
-                      experiences
-                    </p>
-                  </div>
                 </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <p className="text-muted-foreground">
+                    Interfaces modernes, accessibles et claires avec une
+                    attention portée à l’expérience utilisateur. Utilisation de
+                    Figma, SCSS, animations et interactions légères.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="h-6 w-6 text-primary" />
-              </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg">
-                      Project Management
-                    </h4>
-                    <p className="text-muted-foreground">
-                      Leading projects from conception to completion with agile
-                      methodologies.
-                    </p>
-                  </div>
                 </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <p className="text-muted-foreground">
+                    Participation à des projets en équipe comme un réseau social
+                    en microservices. Utilisation de Git, GitHub, Docker
+                    et mise en place des bases de l’intégration continue.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

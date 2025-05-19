@@ -9,7 +9,7 @@ export const HeroSection = () => {
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity- animate-fade-in-delay-0">Hello I'm</span>{" "}
+            <span className="opacity- animate-fade-in-delay-0">Bonjour Je m'appelle</span>{" "}
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
               Ludovic
             </span>{" "}
@@ -18,13 +18,14 @@ export const HeroSection = () => {
             </span>{" "}
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl  mx-auto opacity-0 animate-fade-in-delay-3">
-            I create astrellar web experiences with moder technologies.
-            Specializiing in front-end development,I build interfaces that are
-            both beautifuland functional.
+            Je crée des sites web avec des technologies modernes. Je me
+            concentre sur le front-end pour construire des interfaces claires et
+            agréables à utiliser. J’aime apprendre de nouvelles choses et je
+            cherche toujours à progresser dans ce que je fais.
           </p>
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              View my work
+              Mes projets
             </a>
           </div>
         </div>
