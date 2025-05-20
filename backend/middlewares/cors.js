@@ -1,9 +1,10 @@
-// cors.js
 import cors from "cors";
 
 const allowedOrigins = [
   "http://localhost",
   "http://localhost:5173",
+  "https://beautiful-portfolio-production.up.railway.app"
+
 ];
 
 const corsMiddleware = cors({
