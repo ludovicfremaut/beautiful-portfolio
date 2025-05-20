@@ -9,7 +9,7 @@
     {
       "name": "frontend",
       "rootDir": "frontend",
-      "startCommand": "pnpm run preview",
+      "startCommand": "pnpm run preview -- --port $PORT",
       "buildCommand": "pnpm install && pnpm run build"
     }
   ]
