@@ -3,8 +3,7 @@ FROM node:20 AS builder
 WORKDIR /app
 RUN npm install -g pnpm
 COPY . .
-RUN pnpm install
-RUN pnpm run build
+RUN pnpm install && pnpm run build
 
 # Étape 2 : serveur Nginx
 FROM nginx:alpine
