@@ -1,4 +1,4 @@
-import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Computer, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { cn } from "../lib/utils.js";
 
 export const ContactSection = () => {
@@ -38,7 +38,7 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-        Contacter <span className="text-primary">Moi</span>
+        Contactez <span className="text-primary">Moi</span>
       </h2>
 
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -73,6 +73,7 @@ export const ContactSection = () => {
             <div className="flex items-start space-x-4">
               <div className="p-3 rounded-full bg-primary/10">
                 <Phone className="h-6 w-6 text-primary" />
+                <Computer />
               </div>
               <div>
                 <h4 className="font-medium">Téléphone</h4>
