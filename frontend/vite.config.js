@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -11,8 +10,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  server: {
-    port: parseInt(process.env.PORT) || 5173,
-    host: true, // important pour Railway
+  preview: {
+    port: parseInt(process.env.PORT) || 4173,
+    allowedHosts: ["beautiful-portfolio-production-6132.up.railway.app"],
   },
 });
