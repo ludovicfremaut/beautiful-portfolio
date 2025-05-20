@@ -12,6 +12,8 @@ export default defineConfig({
   },
   preview: {
     port: parseInt(process.env.PORT) || 4173,
-    allowedHosts: ["beautiful-portfolio-production-6132.up.railway.app"],
+    host: true, // 👈 ajoute ceci
+    strictPort: true,
+    allowedHosts: ["beautiful-portfolio-production-96fa.up.railway.app"],
   },
 });
