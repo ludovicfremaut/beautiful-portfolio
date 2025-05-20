@@ -15,6 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 app.use(corsMiddleware);
+app.options("*", corsMiddleware);
 
 // Routes
 app.use("/send-email", mailRoutes);
