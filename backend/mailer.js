@@ -1,8 +1,9 @@
-// mailer.js
+// mailer.js (version ESM)
 
 // Chargement des variables d'environnement
-require('dotenv').config();
-const nodemailer = require('nodemailer');
+import dotenv from "dotenv";
+import nodemailer from "nodemailer";
+dotenv.config();
 
 // Création du transporteur SMTP avec les infos du .env
 const transporter = nodemailer.createTransport({
@@ -15,7 +16,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Fonction pour envoyer un mail
-async function sendMail(subject, text, html) {
+export async function sendMail(subject, text, html) {
   const mailOptions = {
     from: process.env.MAIL_FROM,
     to: process.env.MAIL_TO,
@@ -26,10 +27,8 @@ async function sendMail(subject, text, html) {
 
   try {
     const info = await transporter.sendMail(mailOptions);
-    console.log('✅ Email envoyé :', info.messageId);
+    console.log("✅ Email envoyé :", info.messageId);
   } catch (error) {
-    console.error('❌ Erreur d’envoi de mail :', error);
+    console.error("❌ Erreur d’envoi de mail :", error);
   }
 }
-
-module.exports = { sendMail };

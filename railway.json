@@ -1,0 +1,16 @@
+{
+  "services": [
+    {
+      "name": "backend",
+      "rootDir": "backend",
+      "startCommand": "pnpm start",
+      "buildCommand": "pnpm install"
+    },
+    {
+      "name": "frontend",
+      "rootDir": "frontend",
+      "startCommand": "pnpm run preview",
+      "buildCommand": "pnpm install && pnpm run build"
+    }
+  ]
+}
