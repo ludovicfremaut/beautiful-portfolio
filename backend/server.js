@@ -1,24 +1,24 @@
+// server.js
 import express from "express";
 import dotenv from "dotenv";
-import nodemailer from "nodemailer";
+import path from "path";
+import corsMiddleware from "./cors.js";
+import mailRoutes from "./routes/mail.js";
 
-dotenv.config();
+// Chargement de la config env
+dotenv.config({ path: ".env.production" });
 
 const app = express();
+
+// Middleware
 app.use(express.json());
 app.use(express.static("public"));
+app.use(corsMiddleware);
 
+// Routes
+app.use("/send-email", mailRoutes);
 
-const transporter = nodemailer.createTransport({
-    host: process.env.MAIL_HOST,
-  port: Number(process.env.MAIL_PORT),
-  secure: false, // true for 465, false for other ports
-  auth: {
-    user: "maddison53@ethereal.email",
-    pass: "jn7jnAPss4f63QBp6D",
-  },
-})
-
+// Démarrage du serveur
 app.listen(3000, () => {
-	console.log('Serveur prêt sur http://localhost:3000');
+  console.log("✅ Backend en écoute sur http://localhost:3000");
 });

@@ -2,6 +2,39 @@ import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { cn } from "../lib/utils.js";
 
 export const ContactSection = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
+
+    try {
+      const response = await fetch("/api/send-email", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(formData),
+});
+
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("✅ Message envoyé !");
+        e.target.reset();
+      } else {
+        alert("❌ Erreur : " + data.error);
+      }
+    } catch (err) {
+      console.error("Erreur réseau :", err);
+      alert("Erreur réseau. Vérifie que le backend tourne.");
+    }
+  };
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
@@ -22,7 +55,6 @@ export const ContactSection = () => {
           </h3>
 
           <div className="space-y-6 justify-center">
-            {/* Email */}
             <div className="flex items-start space-x-4">
               <div className="p-3 rounded-full bg-primary/10">
                 <Mail className="h-6 w-6 text-primary" />
@@ -30,7 +62,7 @@ export const ContactSection = () => {
               <div>
                 <h4 className="font-medium">Email</h4>
                 <a
-                  href="mailto:hello@gmail.com"
+                  href="mailto:ludovic.fremaut@hotmail.fr"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   ludovic.fremaut@hotmail.fr
@@ -38,7 +70,6 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Téléphone */}
             <div className="flex items-start space-x-4">
               <div className="p-3 rounded-full bg-primary/10">
                 <Phone className="h-6 w-6 text-primary" />
@@ -54,7 +85,6 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Localisation */}
             <div className="flex items-start space-x-4">
               <div className="p-3 rounded-full bg-primary/10">
                 <MapPin className="h-6 w-6 text-primary" />
@@ -66,7 +96,6 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          {/* Lien LinkedIn */}
           <div className="pt-8">
             <h4 className="font-medium mb-4">LinkedIn</h4>
             <div className="flex space-x-4 justify-center">
@@ -85,7 +114,7 @@ export const ContactSection = () => {
         {/* Formulaire de contact */}
         <div className="bg-card p-8 rounded-lg shadow-xs">
           <h3 className="text-2xl font-semibold mb-6">Envoyer un message</h3>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Votre nom
