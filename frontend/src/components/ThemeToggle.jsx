@@ -4,14 +4,14 @@ import { cn } from "@/lib/utils"; // Fonction utilitaire pour fusionner des clas
 
 // Composant qui permet de basculer entre le mode clair et sombre
 export const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);// État pour savoir si le mode sombre est activé
+  const [isDarkMode, setIsDarkMode] = useState(false); // État pour savoir si le mode sombre est activé
 
   // À l’ouverture de la page, on regarde si un thème est déjà enregistré dans le localStorage
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme === "dark") {
       setIsDarkMode(true);
-      document.documentElement.classList.add("dark");// Ajoute la classe "dark" au HTML
+      document.documentElement.classList.add("dark"); // Ajoute la classe "dark" au HTML
     } else {
       localStorage.setItem("theme", "light");
       setIsDarkMode(false);
@@ -35,17 +35,15 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-1 right-1 z-50 p-2 rounded-full transition-colors duration-300",
+        "fixed top-3 right-3 z-50 p-2 rounded-full transition-colors duration-300",
         "focus:outline-hidden"
       )}
     >
-      {" "}
-      {/* Icône affichée selon le mode actif */}
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />
       ) : (
         <Moon className="h-6 w-6 text-blue-900" />
-      )}{" "}
+      )}
     </button>
   );
 };
