@@ -57,11 +57,11 @@ export const ContactSection = () => {
           </h3>
           <div className="flex flex-col items-center space-y-6">
             {/* Email */}
-            <div className="flex items-start space-x-4">
-              <div className="p-3 rounded-full bg-primary/10">
+            <div className="flex items-center space-x-4">
+              <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-center">
+              <div>
                 <h4 className="font-medium">Email</h4>
                 <a
                   href="mailto:ludovic.fremaut@hotmail.fr"
@@ -73,11 +73,11 @@ export const ContactSection = () => {
             </div>
 
             {/* Téléphone */}
-            <div className="flex items-start space-x-4">
-              <div className="p-3 rounded-full bg-primary/10">
+            <div className="flex items-center space-x-4">
+              <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
                 <Phone className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-center">
+              <div>
                 <h4 className="font-medium">Téléphone</h4>
                 <a
                   href="tel:+33673151112"
@@ -89,22 +89,22 @@ export const ContactSection = () => {
             </div>
 
             {/* Localisation */}
-            <div className="flex items-start space-x-4">
-              <div className="p-3 rounded-full bg-primary/10">
+            <div className="flex items-center space-x-4">
+              <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-center">
+              <div>
                 <h4 className="font-medium">Localisation</h4>
                 <p className="text-muted-foreground">Marcelcave, France</p>
               </div>
             </div>
 
             {/* LinkedIn */}
-            <div className="flex items-start space-x-4">
-              <div className="p-3 rounded-full bg-primary/10">
+            <div className="flex items-center space-x-4">
+              <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
                 <Linkedin className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-center">
+              <div>
                 <h4 className="font-medium">LinkedIn</h4>
                 <a
                   href="https://www.linkedin.com/in/ludovic-fremaut-dev/"
@@ -117,7 +117,6 @@ export const ContactSection = () => {
               </div>
             </div>
           </div>{" "}
-          
         </div>
         {/* Formulaire de contact */}
         <div className="bg-card p-8 rounded-lg shadow-xs">
