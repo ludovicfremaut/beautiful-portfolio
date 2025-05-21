@@ -55,7 +55,7 @@ export const ContactSection = () => {
           <h3 className="text-2xl font-semibold mb-6">
             Informations de contact
           </h3>
-          <div className="flex flex-col items-center space-y-6">
+          <div className="flex flex-col items-start space-y-6">
             {/* Email */}
             <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
               <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
