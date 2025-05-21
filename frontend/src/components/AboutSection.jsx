@@ -38,8 +38,10 @@ export const AboutSection = () => {
                 Me Contacter
               </a>
               <a
+              // Utilise toujours rel="noopener noreferrer" avec target="_blank". C’est une bonne pratique pour la sécurité et la confidentialité.
                 target="blank"
-                href="http://localhost:3000/Fremaut-Ludovic.pdf"
+                rel="noopener noreferrer"
+                href="/Fremaut-Ludovic.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Télécharger mon CV

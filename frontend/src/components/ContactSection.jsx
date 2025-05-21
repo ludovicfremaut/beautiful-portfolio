@@ -12,14 +12,16 @@ export const ContactSection = () => {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/send-email`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(formData),
-});
-
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/send-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -53,13 +55,12 @@ export const ContactSection = () => {
           <h3 className="text-2xl font-semibold mb-6">
             Informations de contact
           </h3>
-
-          <div className="space-y-6 justify-center">
+          <div className="flex flex-col items-center space-y-6">
             <div className="flex items-start space-x-4">
               <div className="p-3 rounded-full bg-primary/10">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
-              <div>
+              <div className="text-center">
                 <h4 className="font-medium">Email</h4>
                 <a
                   href="mailto:ludovic.fremaut@hotmail.fr"
@@ -75,7 +76,7 @@ export const ContactSection = () => {
                 <Phone className="h-6 w-6 text-primary" />
                 <Computer />
               </div>
-              <div>
+              <div className="text-center">
                 <h4 className="font-medium">Téléphone</h4>
                 <a
                   href="tel:+33673151112"
@@ -90,7 +91,7 @@ export const ContactSection = () => {
               <div className="p-3 rounded-full bg-primary/10">
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
-              <div>
+              <div className="text-center">
                 <h4 className="font-medium">Localisation</h4>
                 <p className="text-muted-foreground">Marcelcave, France</p>
               </div>
