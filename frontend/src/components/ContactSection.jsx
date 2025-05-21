@@ -55,68 +55,70 @@ export const ContactSection = () => {
           <h3 className="text-2xl font-semibold mb-6">
             Informations de contact
           </h3>
-<div className="flex flex-col items-center space-y-6">
-  {/* Email */}
-  <div className="flex items-start space-x-4">
-    <div className="p-3 rounded-full bg-primary/10">
-      <Mail className="h-6 w-6 text-primary" />
-    </div>
-    <div className="text-center">
-      <h4 className="font-medium">Email</h4>
-      <a
-        href="mailto:ludovic.fremaut@hotmail.fr"
-        className="text-muted-foreground hover:text-primary transition-colors"
-      >
-        ludovic.fremaut@hotmail.fr
-      </a>
-    </div>
-  </div>
+          <div className="flex flex-col items-center space-y-6">
+            {/* Email */}
+            <div className="flex items-start space-x-4">
+              <div className="p-3 rounded-full bg-primary/10">
+                <Mail className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-center">
+                <h4 className="font-medium">Email</h4>
+                <a
+                  href="mailto:ludovic.fremaut@hotmail.fr"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  ludovic.fremaut@hotmail.fr
+                </a>
+              </div>
+            </div>
 
-  {/* Téléphone */}
-  <div className="flex items-start space-x-4">
-    <div className="p-3 rounded-full bg-primary/10">
-      <Phone className="h-6 w-6 text-primary" />
-    </div>
-    <div className="text-center">
-      <h4 className="font-medium">Téléphone</h4>
-      <a
-        href="tel:+33673151112"
-        className="text-muted-foreground hover:text-primary transition-colors"
-      >
-        (+33) 6 73 15 11 12
-      </a>
-    </div>
-  </div>
+            {/* Téléphone */}
+            <div className="flex items-start space-x-4">
+              <div className="p-3 rounded-full bg-primary/10">
+                <Phone className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-center">
+                <h4 className="font-medium">Téléphone</h4>
+                <a
+                  href="tel:+33673151112"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  (+33) 6 73 15 11 12
+                </a>
+              </div>
+            </div>
 
-  {/* Localisation */}
-  <div className="flex items-start space-x-4">
-    <div className="p-3 rounded-full bg-primary/10">
-      <MapPin className="h-6 w-6 text-primary" />
-    </div>
-    <div className="text-center">
-      <h4 className="font-medium">Localisation</h4>
-      <p className="text-muted-foreground">Marcelcave, France</p>
-    </div>
-  </div>
+            {/* Localisation */}
+            <div className="flex items-start space-x-4">
+              <div className="p-3 rounded-full bg-primary/10">
+                <MapPin className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-center">
+                <h4 className="font-medium">Localisation</h4>
+                <p className="text-muted-foreground">Marcelcave, France</p>
+              </div>
+            </div>
 
-  {/* LinkedIn */}
-  <div className="flex items-start space-x-4">
-    <div className="p-3 rounded-full bg-primary/10">
-      <Linkedin className="h-6 w-6 text-primary" />
-    </div>
-    <div className="text-center">
-      <h4 className="font-medium">LinkedIn</h4>
-      <a
-        href="https://www.linkedin.com/in/ludovic-fremaut-dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-primary transition-colors"
-      >
-        linkedin.com/in/ludovic-fremaut-dev
-      </a>
-    </div>
-  </div>
-</div>
+            {/* LinkedIn */}
+            <div className="flex items-start space-x-4">
+              <div className="p-3 rounded-full bg-primary/10">
+                <Linkedin className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-center">
+                <h4 className="font-medium">LinkedIn</h4>
+                <a
+                  href="https://www.linkedin.com/in/ludovic-fremaut-dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  linkedin.com/in/ludovic-fremaut-dev
+                </a>
+              </div>
+            </div>
+          </div>{" "}
+          
+        </div>
         {/* Formulaire de contact */}
         <div className="bg-card p-8 rounded-lg shadow-xs">
           <h3 className="text-2xl font-semibold mb-6">Envoyer un message</h3>
