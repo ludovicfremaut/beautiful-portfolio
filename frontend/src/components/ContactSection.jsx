@@ -57,7 +57,7 @@ export const ContactSection = () => {
           </h3>
           <div className="flex flex-col items-center space-y-6">
             {/* Email */}
-            <div className="flex items-center space-x-4">
+            <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
               <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
@@ -73,7 +73,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Téléphone */}
-            <div className="flex items-center space-x-4">
+            <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
               <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
                 <Phone className="h-6 w-6 text-primary" />
               </div>
@@ -89,7 +89,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Localisation */}
-            <div className="flex items-center space-x-4">
+            <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
               <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
@@ -100,7 +100,7 @@ export const ContactSection = () => {
             </div>
 
             {/* LinkedIn */}
-            <div className="flex items-center space-x-4">
+            <div className="grid grid-cols-[auto_1fr] gap-4 items-start">
               <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
                 <Linkedin className="h-6 w-6 text-primary" />
               </div>
