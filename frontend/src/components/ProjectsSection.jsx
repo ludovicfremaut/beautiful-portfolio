@@ -9,7 +9,6 @@ const projects = [
       "Un réseau social nouvelle génération, conçu pour évoluer d’un simple MVC à une architecture microservices moderne. Entre sécurité, scalabilité et performance, ce projet met en œuvre les bases solides d'une plateforme sociale ambitieuse.",
     image: "/projects/SocialNetwork.png",
     tags: ["Node.js", "TypeScript", "EJS"],
-    demoURL: "#",
     githubURL: "https://github.com/ludovicfremaut/Social-Network",
   },
   {
@@ -19,7 +18,6 @@ const projects = [
       "Première version de mon portfolio personnel, développée avec React, TypeScript et Vite. Ce projet m’a permis de me lancer dans la création d’une interface moderne, responsive et animée.",
     image: "/projects/FirstPortfolio.png",
     tags: ["React", "Vite", "TailwindCSS"],
-    demoURL: "#",
     githubURL: "https://github.com/ludovicfremaut/PortFolio-ludovic_fremaut",
   },
   {
@@ -29,7 +27,6 @@ const projects = [
       "Conception d’un système intelligent de covoiturage. Réalisé en autonomie lors d’un parcours ECF, ce projet modélise une API REST optimisée pour mettre en relation conducteurs et passagers.",
     image: "/projects/AI-covoit.png",
     tags: ["TypeScript", "Docker", "MongoDB"],
-    demoURL: "#",
     githubURL:
       "https://github.com/ludovicfremaut/AI-covoit/tree/J2-API-user-auth",
   },
@@ -87,14 +84,7 @@ export const ProjectsSection = () => {
 
                 {/* Liens */}
                 <div className="mt-auto flex justify-start items-center gap-4 pt-4">
-                  <a
-                    href={project.demoURL}
-                    className="link-button"
-                    title="Voir la démo"
-                  >
-                    <ExternalLink size={18} />
-                    <span>Démo</span>
-                  </a>
+
                   <a
                     href={project.githubURL}
                     target="_blank"

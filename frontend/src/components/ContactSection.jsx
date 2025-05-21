@@ -1,4 +1,4 @@
-import { Computer, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { cn } from "../lib/utils.js";
 
 export const ContactSection = () => {
@@ -12,14 +12,16 @@ export const ContactSection = () => {
     };
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/send-email`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(formData),
-});
-
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/send-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -49,65 +51,68 @@ export const ContactSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Informations de contact */}
-        <div className="space-y-8">
-          <h3 className="text-2xl font-semibold mb-6">
-            Informations de contact
-          </h3>
+        <div className="h-full flex items-center justify-center">
+          <div className="flex flex-col items-center gap-6">
+            <h3 className="text-2xl font-semibold text-center">
+              Informations de contact
+            </h3>
 
-          <div className="space-y-6 justify-center">
-            <div className="flex items-start space-x-4">
-              <div className="p-3 rounded-full bg-primary/10">
-                <Mail className="h-6 w-6 text-primary" />
+            <div className="flex items-start gap-6">
+              {/* Icônes */}
+              <div className="flex flex-col gap-6">
+                <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-primary" />
+                </div>
+                <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-primary" />
+                </div>
+                <div className="p-3 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Linkedin className="h-6 w-6 text-primary" />
+                </div>
               </div>
-              <div>
-                <h4 className="font-medium">Email</h4>
-                <a
-                  href="mailto:ludovic.fremaut@hotmail.fr"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  ludovic.fremaut@hotmail.fr
-                </a>
-              </div>
-            </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="p-3 rounded-full bg-primary/10">
-                <Phone className="h-6 w-6 text-primary" />
-                <Computer />
-              </div>
-              <div>
-                <h4 className="font-medium">Téléphone</h4>
-                <a
-                  href="tel:+33673151112"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  (+33) 6 73 15 11 12
-                </a>
-              </div>
-            </div>
+              {/* Textes alignés */}
+              <div className="flex flex-col gap-6">
+                <div className="text-center">
+                  <h4 className="font-medium">Email</h4>
+                  <a
+                    href="mailto:ludovic.fremaut@hotmail.fr"
+                    className="text-muted-foreground hover:text-primary transition-colors block"
+                  >
+                    ludovic.fremaut@hotmail.fr
+                  </a>
+                </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="p-3 rounded-full bg-primary/10">
-                <MapPin className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-medium">Localisation</h4>
-                <p className="text-muted-foreground">Marcelcave, France</p>
-              </div>
-            </div>
-          </div>
+                <div className="text-center">
+                  <h4 className="font-medium">Téléphone</h4>
+                  <a
+                    href="tel:+33673151112"
+                    className="text-muted-foreground hover:text-primary transition-colors block"
+                  >
+                    (+33) 6 73 15 11 12
+                  </a>
+                </div>
 
-          <div className="pt-8">
-            <h4 className="font-medium mb-4">LinkedIn</h4>
-            <div className="flex space-x-4 justify-center">
-              <a
-                href="https://www.linkedin.com/in/ludovic-fremaut-dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80"
-              >
-                <Linkedin size={28} />
-              </a>
+                <div className="text-center">
+                  <h4 className="font-medium">Localisation</h4>
+                  <p className="text-muted-foreground">Marcelcave, France</p>
+                </div>
+
+                <div className="text-center">
+                  <h4 className="font-medium">LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/ludovic-fremaut-dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors block"
+                  >
+                    linkedin.com/in/ludovic-fremaut-dev
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

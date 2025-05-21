@@ -3,8 +3,9 @@ import cors from "cors";
 const allowedOrigins = [
   "http://localhost",
   "http://localhost:5173",
-  "https://beautiful-portfolio-production.up.railway.app" // ✅ frontend Railway
+  "https://beautiful-portfolio-production-96fa.up.railway.app", // 👈 ajoute ce domaine
 ];
+
 
 const corsMiddleware = cors({
   origin: (origin, callback) => {

@@ -129,7 +129,7 @@ export const SkillsSection = () => {
               title={skillDetails[skill.name]} // Tooltip d’explication
             >
               {/* Icône + Nom */}
-              <div className="flex items-center gap-2 mb-4 text-left text-green-700 dark:text-lime-300 hover:text-primary transition-colors">
+              <div className="flex items-center gap-2 mb-4 text-left text-green-600 sm:text-green-700 dark:sm:text-lime-300 hover:text-primary transition-colors">
                 {iconMap[skill.name] || <Code size={20} />}
                 <h3 className="font-semibold text-lg">{skill.name}</h3>
               </div>
