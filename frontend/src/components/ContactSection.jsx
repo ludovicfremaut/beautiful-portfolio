@@ -74,7 +74,6 @@ export const ContactSection = () => {
             <div className="flex items-start space-x-4">
               <div className="p-3 rounded-full bg-primary/10">
                 <Phone className="h-6 w-6 text-primary" />
-                <Computer />
               </div>
               <div className="text-center">
                 <h4 className="font-medium">Téléphone</h4>
